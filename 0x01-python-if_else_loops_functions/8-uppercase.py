@@ -7,5 +7,5 @@ def uppercase(str):
             s = s - 32
             s = chr(s)
             str = str[:i] + s + str[i+1:]
-    print(str)
+    print(f"{str}")
     return None
