@@ -13,4 +13,3 @@ if __name__ == "__main__":
             sum = sum + int(sys.argv[index])
             index = index + 1
         print('{}'.format(sum))
-
