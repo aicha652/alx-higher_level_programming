@@ -12,4 +12,4 @@ if __name__ == "__main__":
         while(args >= index):
             sum = sum + int(sys.argv[index])
             index = index + 1
-        print('{}'.format(sum))
+        print("{}".format(sum))
