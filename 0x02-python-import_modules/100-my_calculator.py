@@ -9,18 +9,19 @@ if __name__ == "__main__":
     if args != 3:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    elif sys.argv[2] != '+' and '-' and '*' and '/':
+    elif (sys.argv[2] != '+' and sys.argv[2] != '-' and
+          sys.argv[2] != '*' and sys.argv[2] != '/'):
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
     elif sys.argv[2] == '+':
-        result = int(sys.argv[1]) + int(sys.argv[3])
+        result = add(int(sys.argv[1]), int(sys.argv[3]))
         print('{} + {} = {}'.format(sys.argv[1], sys.argv[3], result))
     elif sys.argv[2] == '-':
-        result = int(sys.argv[1]) - int(sys.argv[3])
+        result = sub(int(sys.argv[1]), int(sys.argv[3]))
         print('{} - {} = {}'.format(sys.argv[1], sys.argv[3], result))
     elif sys.argv[2] == '*':
-        result = int(sys.argv[1]) - int(sys.argv[3])
+        result = mul(int(sys.argv[1]), int(sys.argv[3]))
         print('{} * {} = {}'.format(sys.argv[1], sys.argv[3], result))
     elif sys.argv[2] == '/':
-        result = int(sys.argv[1]) - int(sys.argv[3])
+        result = div(int(sys.argv[1]), int(sys.argv[3]))
         print('{} / {} = {}'.format(sys.argv[1], sys.argv[3], result))
