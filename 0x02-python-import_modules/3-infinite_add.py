@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-import sys
 
-args = len(sys.argv) - 1
+if __name__ == "__main__":
+    import sys
 
-
-def main():
+    args = len(sys.argv) - 1
     if args == 0:
         print('{}'.format(args))
     else:
@@ -15,6 +14,3 @@ def main():
             index = index + 1
         print('{}'.format(sum))
 
-
-if __name__ == "__main__":
-    main()
