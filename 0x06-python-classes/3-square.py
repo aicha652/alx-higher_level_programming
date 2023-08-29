@@ -1,29 +1,29 @@
 #!/usr/bin/python3
-"""Create a Square class"""
+"""Create a Class Square"""
 
 
 class Square:
 
-    """A class that defines a Square
-
-    Attributes:
-        size (int): Description of size
-    """
+    """A class that defines a square"""
 
     def __init__(self, size=0):
 
         """__init__ method
+
         Args:
             size (int): Description of size
         """
-        try:
-            if size is not None:
+        if size is not None:
+            try:
                 if type(size) is not int:
                     raise TypeError
                 if size < 0:
                     raise ValueError
                 self._Square__size = size
-        except TypeError:
-            print("size must be an integer")
-        except ValueError:
-            print("size must be >= 0")
+            except TypeError:
+                print("size must be an integer")
+            except ValueError:
+                print("size must be >= 0")
+
+    def area(self):
+        return self._Square__size * self._Square__size
