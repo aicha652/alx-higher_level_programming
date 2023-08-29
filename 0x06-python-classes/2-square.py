@@ -4,21 +4,27 @@
 
 class Square:
 
-    """A class that defines a Square class"""
-    size = None
+    """A class that defines a Square class
+
+    Attributes:
+        size (int): Description of size
+        """
 
     def __init__(self, size=0):
 
-        """__init__ method"""
-
+        """__init__ method
+        Args:
+            size (int): Description of size
+        """
         try:
             if size is not None:
-                self._Square__size = size
                 if type(size) is not int:
-                    raise TypeError
-                if size < 0:
-                    raise ValueError
-        except TypeError as err:
+                    raise TypeError("size must be an integer")
+                elif size < 0:
+                    raise ValueError("size must be >= 0")
+                else:
+                    self._Square__size = size
+        except TypeError:
             print("size must be an integer")
-        except ValueError as err:
+        except ValueError:
             print("size must be >= 0")
