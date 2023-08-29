@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Create a Square class"""
+
+
 class Square:
 
     """A class that defines a Square class"""
@@ -7,6 +10,7 @@ class Square:
     def __init__(self, size=0):
 
         """__init__ method"""
+
         try:
             if size is not None:
                 self._Square__size = size
