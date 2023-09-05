@@ -1,0 +1,81 @@
+Using matrix_divided
+
+----------------------------- 
+doctest for 2-matrix_divided.py
+-----------------------------
+
+Function that divides all elements of a matrix
+
+Testing division with a positive integer (div)
+::
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Testing division of list of negative integers with a negative integer (div)
+::
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+>>> matrix_divided([[-1, -2, -3], [-4, -5, -6]], -3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Testing division with a negative integer (div)
+::
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -3)
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+Testing division of a list of floats with a positive float (div)
+::
+>>> matrix_divided([[1.2, 2.2, 3.2], [4.2, 5.2, 6.2]], 2.2)
+[[0.55, 1.0, 1.45], [1.91, 2.36, 2.82]]
+
+Testing division of a list of negative floats with a negative float (div)
+::
+>>> matrix_divided([[-1.2, -2.2, -3.2], [-4.2, -5.2, -6.2]], -2.2)
+[[0.55, 1.0, 1.45], [1.91, 2.36, 2.82]]
+
+Testing division of a list of floats with a negative float (div)
+::
+>>> matrix_divided([[1.2, 2.2, 3.2], [4.2, 5.2, 6.2]], -2.2)
+[[-0.55, -1.0, -1.45], [-1.91, -2.36, -2.82]]
+
+Testing division with a type != int or float:
+::
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "3")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Testing division with a string
+::
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "python")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Testing division with a string
+::
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "3")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Testing division with a list of strings
+::
+>>> matrix_divided([["a", "b", "c"], ["d", "e", "f"]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing division with a list of different size of rows
+::
+>>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Testing division with a list of different size of rows
+::
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Testing division with a list of None
+::
+>>> matrix_divided([[None]], 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
