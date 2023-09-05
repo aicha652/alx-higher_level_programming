@@ -1,0 +1,67 @@
+Using print_square
+
+----------------------------- 
+doctest for 4-print_square.py
+-----------------------------
+
+Function that prints a square with the character #
+
+Testing with integer size
+::
+>>> print_square = __import__("4-print_square").print_square
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+Testing with integer size
+::
+>>> print_square(4)
+####
+####
+####
+####
+
+Testing with float size
+::
+>>> print_square(1.3)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Testing with string size
+::
+>>> print_square("1")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Testing with string size
+::
+>>> print_square("python")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Testing with negative integer
+::
+>>> print_square(-4)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+Testing with negative float
+::
+>>> print_square(-4.2)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Testing with empty size
+::
+>>> print_square("")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+Testing with None
+::
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
