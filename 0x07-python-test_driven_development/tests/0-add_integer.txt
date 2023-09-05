@@ -1,0 +1,106 @@
+Using add_integer
+
+----------------------------- 
+doctest for 0-add_integer.py
+-----------------------------
+
+Function that returns sum of two integers
+   
+Testing addition of two positive integers
+::
+>>> add_integer = __import__("0-add_integer").add_integer
+>>> add_integer(3, 4)
+7
+
+Testing addition of two negative integers
+::
+>>> add_integer(-3, -4)
+-7
+
+Testing addition of two integers one postive one negative
+::
+>>> add_integer(4, -2)
+2
+
+Testing addition of two positive floats
+::
+>>> add_integer(3.3, 5.6)
+8
+
+Testing addition of two negative floats
+::
+>>> add_integer(-3.3, -5.6)
+-8
+
+Testing addition of two floats one positive one negative
+::
+>>> add_integer(5.6, -3.1)
+2
+
+Testing addition of two positive numbers, one integer other float
+::
+>>> add_integer(7, 4.3)
+11
+
+Testing addition of two negative numbers, one integer other float
+::
+>>> add_integer(-7, -4.3)
+-11
+
+Testing addition of 1 integer
+::
+>>> add_integer(2)
+100
+
+Testing addition of 1 float
+::
+>>> add_integer(4.3)
+102
+
+Testing addition of an integer and a string
+::
+>>> add_integer(7, "python")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Testing addition of a float and a string
+::
+>>> add_integer(6.3, "python")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Testing addition of a type != int or != float
+::
+>>> add_integer("6", "7")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing addition of a type != int or != float
+::
+>>> add_integer(6, "7")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Testing addition of a type != int or != float
+::
+>>> add_integer("6", 7)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing addition of a type != int or != float
+::
+>>> add_integer("6")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing addition of a boolean type
+::
+>>> add_integer(True, 7)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing addition of None
+::
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
