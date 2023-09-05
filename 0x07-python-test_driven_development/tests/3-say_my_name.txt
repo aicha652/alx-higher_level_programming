@@ -1,0 +1,64 @@
+Using say_my_name
+
+----------------------------- 
+doctest for 3-say_my_name.py
+-----------------------------
+
+Function that prints My name is <first name> <last name>
+
+Testing with two strings
+::
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("Aicha", "Icha")
+My name is Aicha Icha
+
+Testing with two strings
+::
+>>> say_my_name("Mary", "Mimi")
+My name is Mary Mimi
+
+Testing with one string (first_name)
+::
+>>> say_my_name("Mary")
+My name is Mary 
+
+Testing with empty strings
+::
+>>> say_my_name("", "")
+My name is  
+
+Testing with integer
+::
+>>> say_my_name(1, "Mimi")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Testing with integer
+::
+>>> say_my_name("Mary", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Testing with boolean
+::
+>>> say_my_name(True, "Mimi")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Testing with float
+::
+>>> say_my_name("Mary", 1.2)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Testing with None
+::
+>>> say_my_name("Aicha", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Testing with None
+::
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
