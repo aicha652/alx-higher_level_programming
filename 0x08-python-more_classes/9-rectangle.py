@@ -21,7 +21,7 @@ class Rectangle:
     def width(self, value):
         if type(value) != int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -78,4 +78,9 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return (cls(size, size))
+        if isinstance(size, int) and size >= 0:
+            return (cls(size, size))
+        elif isinstance(size, str):
+            raise TypeError("width must be an integer")
+        else:
+            raise ValueError("width must be >= 0")
