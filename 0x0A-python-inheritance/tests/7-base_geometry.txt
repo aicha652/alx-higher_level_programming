@@ -3,12 +3,18 @@ doctest for 7-base_geometry.py
 -------------------------------
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Testing of instanciation
+::
+>>> bg = BaseGeometry()
+
+
 Testing of area():
 ::
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
 
 Testing of integer_validator with normal case
 ::
