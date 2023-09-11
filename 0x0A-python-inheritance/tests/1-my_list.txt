@@ -55,6 +55,13 @@ Testing of empty
 >>> print(my_list)
 [' ']
 
+
+Testing of empty
+::
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
 Testing of error
 ::
 >>> my_list = [1, 2, 3]
