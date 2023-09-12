@@ -4,6 +4,8 @@
 
 
 def write_file(filename="", text=""):
+    """Define a function"""
+
     with open(filename, 'w') as f:
         content = f.write(text)
         return (content)
