@@ -17,5 +17,6 @@ class Student:
         representation of a Student instance"""
 
         if type(attrs) is list:
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+            return {attr: getattr(self, attr) for attr\
+                    in attrs if hasattr(self, attr)}
         return self.__dict__
