@@ -97,9 +97,9 @@ class TestToDict(unittest.TestCase):
     def test_to_dict(self):
         """test for normal square"""
 
-        s1 = Square(10, 2, 1)
+        s1 = Square(10, 2, 1, 5)
         self.assertEqual(s1.to_dictionary(), {
-                         'id': 10, 'x': 2, 'size': 10, 'y': 1})
+                         'id': 5, 'x': 2, 'size': 10, 'y': 1})
         s1 = Square(10, 2, 1, 8)
         self.assertEqual(s1.to_dictionary(), {
                          'id': 8, 'x': 2, 'size': 10, 'y': 1})

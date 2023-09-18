@@ -230,15 +230,15 @@ class TestDict(unittest.TestCase):
     """Test of to_dictionary method"""
 
     def test_to_dict(self):
-        r1 = Rectangle(10, 2, 1, 9)
+        r1 = Rectangle(10, 2, 1, 9, 5)
         r1_dictionary = r1.to_dictionary()
-        r2 = Rectangle(1, 2)
+        r2 = Rectangle(1, 2, 0, 0, 21)
         r2_dictionary = r2.to_dictionary()
 
         self.assertEqual(r1_dictionary, {'x': 1,
-                         'y': 9, 'id': 1, 'height': 2, 'width': 10})
+                         'y': 9, 'id': 5, 'height': 2, 'width': 10})
         self.assertEqual(r2_dictionary, {'height': 2,
-                         'id': 2, 'width': 1, 'x': 0, 'y': 0})
+                         'id': 21, 'width': 1, 'x': 0, 'y': 0})
 
 
 class TestUpdate(unittest.TestCase):
