@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Create a class Rectangle that inherits from Base"""
-Base = __import__('base').Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -98,14 +98,28 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """public method  that assigns an argument to each attribute"""
-        for key, value in kwargs.items():
-            if hasattr(self, key):
-                setattr(self, key, value)
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-               self.x, self.y, self.width, self.height))
+        num_args = len(args)
+        if args:
+            if num_args >= 1:
+                self.id = args[0]
+            if num_args >= 2:
+                self.width = args[1]
+            if num_args >= 3:
+                self.height = args[2]
+            if num_args >= 4:
+                self.x = args[3]
+            if num_args >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+            return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                    self.x, self.y, self.width, self.height))
 
     def to_dictionary(self):
-        """public method that returns the dictionary representation of a Rectangle"""
+        """public method that returns the
+        dictionary representation of a Rectangle"""
         d = dict()
         d['x'] = self.x
         d['y'] = self.y

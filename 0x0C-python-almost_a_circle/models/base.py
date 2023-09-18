@@ -63,7 +63,7 @@ class Base:
         """class method that returns a list of instances"""
         file_name = cls.__name__ + ".json"
         with open(file_name, "r") as file:
-            json_data = file.read() # read json data  from file
+            json_data = file.read()  # read json data  from file
             list_data = cls.from_json_string(json_data)
             list_instance = [cls.create(**data) for data in list_data]
         return list_instance

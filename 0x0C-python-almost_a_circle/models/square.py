@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Create a class Square that inherits from Rectangle"""
-Rectangle = __import__("rectangle").Rectangle
+from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Square(Rectangle):
@@ -43,7 +44,8 @@ class Square(Rectangle):
                 self.y, self.size))
 
     def to_dictionary(self):
-        """public method that returns the dictionary representation of a Square"""
+        """public method that returns the
+        dictionary representation of a Square"""
         d = dict()
         d['id'] = self.id
         d['x'] = self.x
