@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" script that takes in the name of a state as an argument
+and lists all cities of that state, using the database hbtn_0e_4_usa"""
+
 import MySQLdb
 conn = MySQLdb.connect(host="localhost", port=3306, user="root",
                        passwd="root", db="hbtn_0e_4_usa", charset="utf8")

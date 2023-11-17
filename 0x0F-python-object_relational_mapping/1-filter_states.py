@@ -1,11 +1,11 @@
 #!/usr/bin/python3
+"""script that lists all states with a name starting
+with N (upper N) from the database hbtn_0e_0_usa"""
+
 import MySQLdb
-import sys
 conn = MySQLdb.connect(user="root", passwd="root", db="hbtn_0e_0_usa")
-name = sys.argv[4]
 cur = conn.cursor()
-query = "SELECT * FROM states WHERE name = '{}'".format(name)
-cur.execute(query)
+cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 # HERE I have to know SQL to grab all states in my database
 query_rows = cur.fetchall()
 for row in query_rows:

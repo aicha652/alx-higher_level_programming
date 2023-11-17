@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""script that lists all cities from the database hbtn_0e_4_usa"""
+
 import MySQLdb
 conn = MySQLdb.connect(user="root", passwd="root", db="hbtn_0e_4_usa")
 cur = conn.cursor()
