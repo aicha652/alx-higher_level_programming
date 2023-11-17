@@ -10,8 +10,8 @@ if __name__ == '__main__':
     database = sys.argv[3]
     conn = MySQLdb.connect(user=username, passwd=password, db=database)
     cur = conn.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities,states \
-        WHERE states.id = cities.state_id ORDER BY cities.id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities, \
+            states WHERE states.id = cities.state_id ORDER BY cities.id ASC")
     # HERE I have to know SQL to grab all states in my database
     query_rows = cur.fetchall()
     for row in query_rows:
