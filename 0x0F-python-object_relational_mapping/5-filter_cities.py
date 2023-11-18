@@ -19,7 +19,8 @@ if __name__ == '__main__':  # The code should not be executed when imported
     # Create a cursor object to execute sql queries
     cur = conn.cursor()
     query = "SELECT cities.name FROM cities, states WHERE \
-            cities.state_id = states.id and states.name = %s ORDER BY cities.id ASC"
+            cities.state_id = states.id and states.name = %s \
+            ORDER BY cities.id ASC"
 
     # Execute the query
     cur.execute(query, (name,))
