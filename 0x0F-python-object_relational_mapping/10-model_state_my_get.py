@@ -17,9 +17,10 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).filter(State.name.like(f'%{name}%')).all():
-        if state:
+    states = session.query(State).filter(State.name.like(f'%{name}%')).all()
+    if states:
+        for state in states:
             print("{}".format(state.id))
-        else:
-            print("Not found")
+    else:
+        print("Not found")
     session.close()
