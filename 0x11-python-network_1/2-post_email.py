@@ -7,7 +7,8 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    mail = sys.argv[2]
-    with urllib.request.urlopen(url, mail) as response:
-        email = response.read().decode()
-        print(email)
+    email = sys.argv[2]
+    data = urllib.parse.urlencode({'email': email}).encode("utf-8")
+    with urllib.request.urlopen(url, data) as response:
+        body = response.read().decode("utf-8")
+        print(body)
