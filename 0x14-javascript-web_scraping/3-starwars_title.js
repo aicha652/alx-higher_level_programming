@@ -15,6 +15,10 @@ const movieId = process.argv[2];
 const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 // Make a GET request to fetch information about the film
+// body :variable that likely contains the
+// response body received from an HTTP request
+// JSON.parse() :parses a JSON string and
+// returns a JavaScript object
 request(url, (error, response, body) => {
   if (error) throw error;
   const filmData = JSON.parse(body);
