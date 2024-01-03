@@ -20,6 +20,8 @@ const filename = process.argv[3];
 request(url, (error, response, body) => {
   if (error) throw error;
   else {
-    fs.writeFileSync(filename, body, 'utf-8');
+    fs.writeFileSync(filename, body, 'utf-8', (err) => {
+      if (err) throw err;
+    });
   }
 });
